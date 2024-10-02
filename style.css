@@ -39,7 +39,7 @@ ul li:hover {
     background: #d48080;
 }
 
-#myUL li input[checked] + label{
+#myUL li input[checked]+label {
     text-decoration: line-through;
 }
 
@@ -53,7 +53,7 @@ ul li span {
     text-align: right;
 }
 
-ul li span:hover{
+ul li span:hover {
     color: #f9f9f9;
     cursor: pointer;
 }

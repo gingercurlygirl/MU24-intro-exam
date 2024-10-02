@@ -1,7 +1,7 @@
 const myInput = document.getElementById("myInput");
 const myUL = document.getElementById("myUL");
 function newElement() {
-    if(myInput.value === ''){
+    if (myInput.value === '') {
         alert("You must write something!");
 
     }
@@ -15,22 +15,22 @@ function newElement() {
 
 }
 
-myUL.addEventListener("click", function(e){
-    if(e.target.tagName === "INPUT"){
+myUL.addEventListener("click", function (e) {
+    if (e.target.tagName === "INPUT") {
         e.target.toggleAttribute("checked");
         saveData();
-    }else if(e.target.tagName === "SPAN"){
+    } else if (e.target.tagName === "SPAN") {
         e.target.parentElement.remove();
         saveData();
     }
 })
 
 
-function saveData(){
+function saveData() {
     localStorage.setItem("data", myUL.innerHTML);
 }
 
-function showList(){
+function showList() {
     let data = localStorage.getItem("data");
     if (data) {
         myUL.innerHTML = data;
