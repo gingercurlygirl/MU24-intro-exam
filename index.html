@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>To do list</title>
+</head>
+
+<body>
+    <header>
+        <h1>List for Thursday</h1>
+    </header>
+    <main>
+        <div id="checkboxes">
+            <h2>My TODO:</h1>
+                <ul id="myUL">
+                    <li><input type="checkbox"> <label>buy bread for breakfast</label></li>
+                    <li><input type="checkbox"> <label>water the flowers</label></li>
+                    <li><input type="checkbox"> <label>dentist 9:15</label></li>
+                    <li><input type="checkbox"> <label>wash clothes</label></li>
+                    <li><input type="checkbox"> <label>pick up the package</label></li>
+                    <li><input type="checkbox"> <label>organize wardrobe</label></li>
+                </ul>
+        </div>
+        <div id="addMore">
+            <input type="text" id="myInput" placeholder="Add more...">
+            <span onclick="newElement()" class="addBtn">+</span>
+        </div>
+
+        <div id="search"></div>
+        <input type="text" id="mySearch" placeholder="Search todo">
+        <span onclick="newElement()" class="SearchBtn">Search</span>
+        </div>
+    </main>
+
+    <footer>
+        <p>Ivana Lovric &#169;</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
