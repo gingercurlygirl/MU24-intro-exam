@@ -7,18 +7,20 @@ function newElement() {
     }
     else {
         let li = document.createElement("li");
-        li.innerHTML = '<input type="checkbox"> <label>' + myInput.value + '</label>';
+        li.innerHTML = '<input type="checkbox"> <label>' + myInput.value + '</label><span>\u00d7</span>';
         myUL.appendChild(li);
-    
+        saveData()
     }
     myInput.value = "";
-    saveData()
 
 }
 
 myUL.addEventListener("click", function(e){
     if(e.target.tagName === "INPUT"){
         e.target.toggleAttribute("checked");
+        saveData();
+    }else if(e.target.tagName === "SPAN"){
+        e.target.parentElement.remove();
         saveData();
     }
 })

@@ -22,9 +22,10 @@ ul {
 }
 
 ul li {
+    display: flex;
+    gap: 2%;
     list-style: none;
-    cursor: pointer;
-    padding: 15px 30px 20px 40px;
+    padding: 15px 10px 15px 10px;
     background: #d3c6c6;
     font-size: 20px;
 }
@@ -47,6 +48,15 @@ ul li:hover {
     margin-bottom: 20%;
 }
 
+ul li span {
+    flex-grow: 1;
+    text-align: right;
+}
+
+ul li span:hover{
+    color: #f9f9f9;
+    cursor: pointer;
+}
 
 h2 {
     font-family: 'Times New Roman', Times, serif;
@@ -91,6 +101,8 @@ h2 {
 .SearchBtn:hover {
     background-color: #c81111;
 }
+
+
 
 footer {
     margin-top: 15%;
