@@ -43,6 +43,10 @@ ul li:hover {
     text-decoration: line-through;
 }
 
+#myUL.hidden {
+    display: none;
+}
+
 #checkboxes {
     margin-top: 20%;
     margin-bottom: 20%;
@@ -101,8 +105,6 @@ h2 {
 .SearchBtn:hover {
     background-color: #c81111;
 }
-
-
 
 footer {
     margin-top: 15%;

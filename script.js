@@ -37,4 +37,27 @@ function showList() {
     }
 }
 
-showList(); 
+showList();
+
+const items = document.querySelectorAll('#myUL li');
+const searchButton = document.getElementById("searchButton");
+const searchText = document.getElementById("searchText");
+const myULcopy = document.getElementById("myULcopy");
+searchButton.addEventListener('click', function (e) {
+    myULcopy.innerHTML = "";
+    const searchData = searchText.value;
+    if (searchData == "") {
+        myUL.classList.remove("hidden");
+        return;
+    }
+
+    myUL.classList.add("hidden")
+    let foundAnItem = false;
+    items.forEach(row => {
+        const itemText = row.querySelector('label').innerText;
+        if (itemText.includes(searchData)) {
+            myULcopy.appendChild(row.cloneNode(true));
+            foundAnItem = true;
+        }
+    });
+});
